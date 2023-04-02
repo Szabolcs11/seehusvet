@@ -11,8 +11,11 @@ function Navbar() {
       <div
         style={{ cursor: "pointer", color: "white", padding: 10 }}
         onClick={() => {
-          setSelected("Szep");
-          changetype("Szep");
+          if (window.location.pathname !== "/") navigate("/");
+          if (changetype) {
+            setSelected("Szep");
+            changetype("Szep");
+          }
         }}
       >
         Szép
@@ -20,8 +23,11 @@ function Navbar() {
       <div
         style={{ cursor: "pointer", color: "white", padding: 10 }}
         onClick={() => {
-          setSelected("Vicces");
-          changetype("Vicces");
+          if (window.location.pathname !== "/") navigate("/");
+          if (changetype) {
+            setSelected("Vicces");
+            changetype("Vicces");
+          }
         }}
       >
         Vicces
@@ -29,8 +35,11 @@ function Navbar() {
       <div
         style={{ cursor: "pointer", color: "white", padding: 10 }}
         onClick={() => {
-          setSelected("Aranyos");
-          changetype("Aranyos");
+          if (window.location.pathname !== "/") navigate("/");
+          if (changetype) {
+            setSelected("Aranyos");
+            changetype("Aranyos");
+          }
         }}
       >
         Aranyos
