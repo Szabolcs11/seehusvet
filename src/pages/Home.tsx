@@ -34,7 +34,7 @@ function Home() {
       </div>
       <div className="itemcontainer">
         {typedList[type]
-          .filter((e) => e.includes(searchtext))
+          .filter((e) => e.toLocaleLowerCase().includes(searchtext.toLocaleLowerCase()))
           .map((e: any) => {
             const highlighted = e.replace(new RegExp(searchtext, "gi"), (match: any) => `<span class="highlight">${match}</span>`);
             return (
