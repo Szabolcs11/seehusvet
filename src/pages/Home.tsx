@@ -22,15 +22,19 @@ function Home() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <h1>{type}</h1>
       </div>
-      <div style={{ display: "flex", justifyContent: "center", margin: 12 }}>
+      <div style={{ display: "flex", justifyContent: "center", margin: 12, gap: 6 }}>
         <input
           onChange={(e) => {
             setSearchText(e.target.value);
           }}
+          value={searchtext}
           style={{ border: "1px solid black", outline: "none", padding: 6, fontSize: 14 }}
           type="text"
           placeholder="Search..."
         />
+        <div onClick={() => setSearchText("")} style={{ padding: 6, fontSize: 14, backgroundColor: "gray", cursor: "pointer" }}>
+          <a>Clear</a>
+        </div>
       </div>
       <div className="itemcontainer">
         {typedList[type]
